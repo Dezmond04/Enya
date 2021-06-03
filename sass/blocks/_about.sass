@@ -1,0 +1,78 @@
+.about
+  &__text-wrapper
+    display: flex
+    justify-content: space-between 
+    // margin-bottom: 100px   
+  &__text
+    max-width: 585px
+    padding-left: 4px    
+  &__title    
+    font-family: Roboto Condensed
+    font-style: normal
+    font-weight: bold
+    font-size: 49px
+    line-height: 60px
+    padding-right: 80px
+    padding-top: 22px
+    margin-top: 0
+    margin-bottom: 27px    
+    &--color
+      display: block
+      color: #FAAD13
+      margin-bottom: 0
+  &__author
+    display: inline-block
+    font-family: Roboto
+    font-style: normal
+    font-weight: 500
+    font-size: 20px
+    line-height: 24px
+    margin-bottom: 38px
+  &__info
+    margin-top: 0
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 32px
+    margin-bottom: 56px
+  &__button
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+    text-transform: uppercase
+    &-buy
+      padding: 18px 37px
+      background: $primary
+      color: $light
+      border: none
+      margin-right: 23px
+    &-read
+      padding: 15px 49px
+      background-color: $light
+      color: $primary
+      border: 2px solid $primary
+      font-style: normal
+      font-weight: bold
+      font-size: 18px
+      line-height: 25px
+  &__image
+    &-wrapper 
+      position: relative
+      max-width: 488px
+      padding: 103px 115px 103px 122px
+      &::after   
+        content: ''  
+        position: absolute  
+        width: 100%
+        height: 100%
+        top: 0  
+        right: 0
+        bottom: 0
+        left: 0  
+        background: #B3BAC5
+        opacity: 0.1
+        z-index: -5
+        
+           
+

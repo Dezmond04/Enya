@@ -1,0 +1,199 @@
+.products
+  padding-top: 94px
+  padding-left: 6px
+  &-wrapper
+    display: flex
+.card
+  &-wrapper
+    display: flex    
+    flex-wrap: wrap
+    justify-content: space-between
+    max-width: 751px    
+.recommendation  
+  &__title
+    font-family: Roboto Condensed
+    font-style: normal
+    font-weight: bold
+    font-size: 32px
+    line-height: 40px
+    letter-spacing: 0.2px
+    margin-top: 0
+    margin-bottom: 30px    
+  &-card 
+    display: flex      
+    width: 358px  
+    margin-bottom: 30px         
+    border: 1px solid #ECEEF2
+    border-radius: 8px  
+    &:nth-child(n+5)
+      margin-bottom: 23px
+        
+    &__item
+      padding: 11px 0 11px 11px
+      margin-right: 20px
+    &__image
+      width: 160px
+      height: 236px
+      object-fit: cover    
+    &__title
+      font-family: Roboto
+      font-style: normal
+      font-weight: 500
+      font-size: 22px
+      line-height: 32px
+      letter-spacing: 0.2px
+      margin-top: 24px
+      margin-bottom: 15px
+      &-text
+        display: block
+    &__name
+      display: block
+      font-family: Open Sans
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 25px
+    &__price
+      display: block
+      font-family: Roboto Condensed
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 24px
+      letter-spacing: 0.2px
+      color: #1565D8
+      margin-bottom: 23px
+    &__button
+      padding: 7px 20px
+      font-style: normal
+      font-weight: bold
+      font-size: 16px
+      line-height: 22px
+      color: $light
+      background-color: $secondary      
+      border-radius: 2000px
+      margin-right: 10px
+      &-like        
+        background-color: transparent 
+        vertical-align: middle 
+  &__button 
+    width: 100%
+    min-height: 72px
+    position: relative    
+    font-family: Roboto Condensed
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    letter-spacing: 0.2px
+    text-transform: uppercase  
+    color: $primary
+    border-radius: 8px    
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0  
+      background: #1565D8
+      mix-blend-mode: normal
+      opacity: 0.1
+      border-radius: 8px   
+        
+.best
+  align-items: start
+  &-wrapper
+    position: relative
+    min-width: 360px
+    padding-top: 24px
+    margin-left: 32px
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: #B3BAC5
+      mix-blend-mode: normal
+      opacity: 0.1
+      border-radius: 8px
+  &__title    
+    margin-top: 0
+    margin-left: 32px
+    margin-bottom: 32px     
+    font-family: Roboto Condensed
+    font-style: normal
+    font-weight: bold
+    font-size: 32px
+    line-height: 40px
+    letter-spacing: 0.2px
+  &-card
+    display: flex
+    justify-content: space-between 
+    max-width: 340px 
+    padding-left: 24px
+    margin-bottom: 30px
+    &:nth-child(n+2)
+      margin-bottom: 35px
+    &:nth-child(n+4)
+      margin-bottom: 22px     
+    &__item
+      margin-right: 26px
+    &__image
+      width: 120px      
+    &__title
+      margin-top: 9px
+      margin-bottom: 14px
+      font-family: Roboto
+      font-style: normal
+      font-weight: 500
+      font-size: 22px
+      line-height: 32px
+      letter-spacing: 0.2px
+    &__price
+      display: block  
+      font-family: Roboto Condensed
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 24px
+      letter-spacing: 0.2px
+      color: $primary  
+      margin-bottom: 20px
+    &__button 
+      padding: 7px 20px
+      font-style: normal
+      font-weight: bold
+      font-size: 16px
+      line-height: 22px
+      color: $light
+      background-color: $secondary      
+      border-radius: 2000px
+      margin-right: 10px
+  &__button
+    width: 100%
+    min-height: 72px
+    position: relative    
+    font-family: Roboto Condensed
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    letter-spacing: 0.2px
+    text-transform: uppercase  
+    color: $primary
+    border-radius: 8px    
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0  
+      background: #1565D8
+      mix-blend-mode: normal
+      opacity: 0.1
+      border-radius: 8px  
