@@ -120,6 +120,7 @@
       mix-blend-mode: normal
       opacity: 0.1
       border-radius: 8px
+      z-index: -5
   &__title    
     margin-top: 0
     margin-left: 32px
@@ -133,13 +134,16 @@
   &-card
     display: flex
     justify-content: space-between 
-    max-width: 340px 
-    padding-left: 24px
+    max-width: 312px 
+    margin-left: auto
+    margin-right: auto    
     margin-bottom: 30px
     &:nth-child(n+2)
       margin-bottom: 35px
     &:nth-child(n+4)
-      margin-bottom: 22px     
+      margin-bottom: 0    
+      padding-bottom: 22px
+      border-bottom: 1px solid #ECEEF2
     &__item
       margin-right: 26px
     &__image
@@ -176,8 +180,7 @@
       margin-right: 10px
   &__button
     width: 100%
-    min-height: 72px
-    position: relative    
+    min-height: 72px   
     font-family: Roboto Condensed
     font-style: normal
     font-weight: bold
@@ -186,15 +189,6 @@
     letter-spacing: 0.2px
     text-transform: uppercase  
     color: $primary
-    border-radius: 8px    
-    &::after
-      content: ''
-      position: absolute
-      top: 0
-      right: 0
-      bottom: 0
-      left: 0  
-      background: #1565D8
-      mix-blend-mode: normal
-      opacity: 0.1
-      border-radius: 8px  
+    border-radius: 8px  
+    background-color: transparent    
+    

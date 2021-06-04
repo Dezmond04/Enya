@@ -1,0 +1,52 @@
+.unreleased
+  min-height: 548px
+  padding-top: 33px
+  padding-bottom: 80px
+  background-color: $secondary
+  &__title
+    margin-bottom: 59px
+    padding-left: 5px
+    font-family: Roboto Condensed
+    font-style: normal
+    font-weight: bold
+    font-size: 36px
+    line-height: 48px
+    letter-spacing: 0.2px
+    color: $light
+  &__slider  
+    position: relative  
+    width: 100%
+    height: 518px
+    margin-top: -110px
+    padding-left: 5px
+    padding-top: 110px
+  &-slider
+    &__item 
+      width: 100%
+      height: 100%     
+      overflow: hidden
+      object-fit: cover
+      border-radius: 14px
+    &__button
+      position: absolute
+      top: 0      
+      z-index: 5
+      width: 54px
+      height: 56px
+      background-size: 15px
+      border: none
+      cursor: pointer    
+      background: transparent
+      outline: 0
+      background-repeat: no-repeat 
+      background-position: center 
+      &--next
+        right: 0px
+        background-image: url(../img/button-next.png)
+      &--prev
+        right: 70px
+        background-image: url(../img/button-prev.png)
+        
+
+    
+      
