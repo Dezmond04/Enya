@@ -190,5 +190,45 @@
     text-transform: uppercase  
     color: $primary
     border-radius: 8px  
-    background-color: transparent    
+    background-color: transparent 
+@media (max-width:1200px)
+  .recommendation
+    &-card
+      width: 480px
+      &:nth-child(n+4)
+        display: none
+      &__image
+        height: 234px
+@media (max-width: 992px) 
+  .products
+    &-wrapper
+      flex-direction: column
+  .card
+    &-wrapper
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+  .recommendation
+    &-card
+      max-width: 340px
+      &:nth-child(4)
+        display: flex
+      &__title
+        &-text
+          display: inline
+    &__button
+      margin-bottom: 70px
+  .best
+    &-wrapper
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    &__button
+      border-top: 1px solid #ECEEF2
+      
+          
+
+         
+        
+     
     
