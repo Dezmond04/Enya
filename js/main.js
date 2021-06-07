@@ -4,9 +4,11 @@ const categorySlider = new Swiper(".category-slider", {
 		onlyInViewport: false,
 	},
 	// Optional parameters
-	slidesPerView: 4,
-	spaceBetween: 28,
-	loop: true,
+	slidesPerView: 2,
+	spaceBetween: 10,
+	slidesPerColumn: 2,
+	slidesPerColumnFill: "row",
+	loop: false,
 	breakpoints: {
 		320: {
 			slidesPerView: 2,
@@ -24,10 +26,12 @@ const categorySlider = new Swiper(".category-slider", {
 		},
 		992: {
 			slidesPerView: 3,
+			loop: true,
 		},
 		1200: {
 			slidesPerView: 4,
 			spaceBetween: 28,
+			loop: true,
 		},
 	},
 

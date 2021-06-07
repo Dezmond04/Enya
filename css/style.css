@@ -2166,6 +2166,22 @@ template {
     margin-bottom: 30px;
   }
 }
+@media (max-width: 767px) {
+  .footer {
+    padding-top: 48px;
+    padding-bottom: 30px;
+  }
+  .footer__company-services {
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 7px;
+  }
+  .footer__about {
+    width: 40%;
+    margin-bottom: 22px;
+    margin-left: 40px;
+  }
+}
 @media (max-width: 576px) {
   .footer {
     padding-top: 48px;
