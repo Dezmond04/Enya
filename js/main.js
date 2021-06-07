@@ -8,9 +8,19 @@ const categorySlider = new Swiper(".category-slider", {
 	spaceBetween: 28,
 	loop: true,
 	breakpoints: {
+		320: {
+			slidesPerView: 2,
+			spaceBetween: 10,
+			slidesPerColumn: 2,
+			slidesPerColumnFill: "row",
+			loop: false,
+		},
 		768: {
 			slidesPerView: 2,
 			spaceBetween: 30,
+			slidesPerColumn: 2,
+			slidesPerColumnFill: "row",
+			loop: false,
 		},
 		992: {
 			slidesPerView: 3,
@@ -33,10 +43,12 @@ const unreleasedSlider = new Swiper(".unreleased-slider", {
 		onlyInViewport: false,
 	},
 	// Optional parameters
-	slidesPerView: 5,
-	spaceBetween: 32,
+	slidesPerView: 1,
 	loop: false,
 	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
 		768: {
 			slidesPerView: 4,
 			spaceBetween: 32,

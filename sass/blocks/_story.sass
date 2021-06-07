@@ -106,9 +106,94 @@
   .story
     &-wrapper
       max-width: 650px
+      padding-top: 50px
     &__item
       &:last-child
         display: none
+@media (max-width: 767px)
+  .story
+    &-wrapper
+      max-width: 92%
+    &__video
+      min-height: 100%
+    &__item
+      &-main
+        height: 100%
+      &-secondary
+        max-width: 48%
+        height: 100%
+    &__play      
+      height: 12%
+      &-main
+        width: 40%
+        height: 40%
+@media (max-width: 576px)
+  .story
+    &__top
+      &-wrapper
+        margin-bottom: 0
+    &-wrapper
+      max-width: 100%
+      padding-top: 27px
+      padding-left: 0
+      padding-bottom: 40px
+      margin: 0
+    &__title
+      margin-bottom: 24px
+      font-style: normal
+      font-weight: bold
+      font-size: 28px
+      line-height: 36px
+    &__text
+      margin-bottom: 35px
+      padding-left: 20px
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 25px
+    &__item
+      &-main
+        height: 210px
+        margin-bottom: 21px
+      &-secondary
+        padding-left: 5px
+    &__play
+      top: 24%
+      width: 21px
+      height: 27px
+      &-main
+        top: 37%
+        height: 55px
+        width: 55px
+    &__image
+      &-secondary
+        margin-bottom: 13px
+        width: 100%
+        height: 138px
+    &__name
+      margin-bottom: 5px
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 20px
+      &-wrapper
+        justify-content: center
+    &__about
+      margin-bottom: 14px
+      text-align: center
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 20px
+    &__favorites
+      padding: 0
+      order: 2
+      &-image 
+        width: 10px
+        height: 14px
+
+
+        
       
   
 

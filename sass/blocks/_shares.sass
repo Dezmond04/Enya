@@ -64,4 +64,51 @@
     &__title
       margin-top: 5px
       font-size: 27px
-  
+@media (max-width: 992px)
+  .shares
+    &-wrapper
+      flex-direction: column
+      justify-content: center
+      padding-top: 40px
+      padding-bottom: 60px
+    &__title      
+      max-width: 100%
+      text-align: center
+    &__subscribe
+      margin: auto
+@media (max-width: 576px)
+  .shares
+    background-image: url(../img/shares-background.jpg)
+    object-fit: cover    
+    &-wrapper
+      padding-top: 20px
+      padding-bottom: 28px
+      padding-right: 0
+      padding-left: 0
+      justify-content: flex-start
+    &__title
+      max-width: 200px
+      font-style: normal
+      font-weight: bold
+      font-size: 28px
+      line-height: 36px
+      text-align: left
+      &-text
+        display: block   
+    &__subscribe
+      width: 100%
+      min-height: 112px 
+    &__input
+      height: 112px
+      margin-top: 33px
+      padding-bottom: 56px
+      padding-right: 20px
+    &__button
+      width: 92%
+      min-height: 43px
+      top: 60px
+      right: 10px
+    &__icon
+      top: 23px
+         
+       

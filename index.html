@@ -32,6 +32,11 @@
 								<a href="#" class="navbar-menu__link">Блог</a>
 							</li>
 						</ul>
+						<button class="menu-button navbar__menu-button">
+							<span class="menu-button__line"></span>
+							<span class="menu-button__line"></span>
+							<span class="menu-button__line"></span>
+						</button>
 						<button class="button navbar-menu__button">Получить</button>
 					</div>
 					<!-- /.navbar-menu__wrapper -->
@@ -56,7 +61,7 @@
 							проектов для крупных клиентов. Теперь я делюсь своими золотыми
 							стратегиями ценообразования на творческую работу.
 						</p>
-						<div class="about__buttons-wraper">
+						<div class="about__buttons-wrapper">
 							<button class="button about__button about__button-buy">
 								Купить сейчас
 							</button>
@@ -302,7 +307,9 @@
 								<!-- /.best-card__info -->
 							</div>
 							<!-- /.best-card -->
-							<button class="best__button">Лучшие книги</button>
+							<div class="best__button-wrapper">
+								<button class="best__button">Лучшие книги</button>
+							</div>
 						</div>
 						<!-- /.best-wrapper -->
 					</div>
@@ -334,7 +341,9 @@
 								alt="Icon: Diamand"
 								class="category-slider__icon"
 							/>
-							<h3 class="category-slider__title">Самомотиватия</h3>
+							<h3 class="category-slider__title category-slider__title--mb2">
+								Самомотиватия
+							</h3>
 							<span class="category-slider__text">Книги о мотивации</span>
 						</div>
 
@@ -373,64 +382,79 @@
 		<!-- /.category -->
 		<div class="unreleased">
 			<div class="container">
-				<h2 class="unreleased__title">Неизданные книги</h2>
-				<!-- Slider main container -->
-				<div class="swiper-container unreleased-slider unreleased__slider">
-					<!-- Additional required wrapper -->
-					<div class="swiper-wrapper">
-						<!-- Slides -->
-						<div class="swiper-slide unreleased-slider__item">
-							<img
-								src="img/unreleased-image-1.jpg"
-								alt="Photo: Book"
-								class="unreleased-slider__image"
-							/>
+				<div class="unreleased-wrapper">
+					<h2 class="unreleased__title">Неизданные книги</h2>
+					<!-- Slider main container -->
+					<div class="swiper-container unreleased-slider unreleased__slider">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide unreleased-slider__item">
+								<img
+									src="img/unreleased-image-1.jpg"
+									alt="Photo: Book"
+									class="unreleased-slider__image"
+								/>
+							</div>
+							<div class="swiper-slide unreleased-slider__item">
+								<img
+									src="img/unreleased-image-2.jpg"
+									alt="Photo: Book"
+									class="unreleased-slider__image"
+								/>
+							</div>
+							<div class="swiper-slide unreleased-slider__item">
+								<img
+									src="img/unreleased-image-3.jpg"
+									alt="Photo: Book"
+									class="unreleased-slider__image"
+								/>
+							</div>
+							<div class="swiper-slide unreleased-slider__item">
+								<img
+									src="img/unreleased-image-4.jpg"
+									alt="Photo: Book"
+									class="unreleased-slider__image"
+								/>
+							</div>
+							<div class="swiper-slide unreleased-slider__item">
+								<img
+									src="img/unreleased-image-5.jpg"
+									alt="Photo: Book"
+									class="unreleased-slider__image"
+								/>
+							</div>
+							<div class="swiper-slide unreleased-slider__item">
+								<img
+									src="img/unreleased-image-5.jpg"
+									alt="Photo: Book"
+									class="unreleased-slider__image"
+								/>
+							</div>
 						</div>
-						<div class="swiper-slide unreleased-slider__item">
-							<img
-								src="img/unreleased-image-2.jpg"
-								alt="Photo: Book"
-								class="unreleased-slider__image"
-							/>
-						</div>
-						<div class="swiper-slide unreleased-slider__item">
-							<img
-								src="img/unreleased-image-3.jpg"
-								alt="Photo: Book"
-								class="unreleased-slider__image"
-							/>
-						</div>
-						<div class="swiper-slide unreleased-slider__item">
-							<img
-								src="img/unreleased-image-4.jpg"
-								alt="Photo: Book"
-								class="unreleased-slider__image"
-							/>
-						</div>
-						<div class="swiper-slide unreleased-slider__item">
-							<img
-								src="img/unreleased-image-5.jpg"
-								alt="Photo: Book"
-								class="unreleased-slider__image"
-							/>
-						</div>
-						<div class="swiper-slide unreleased-slider__item">
-							<img
-								src="img/unreleased-image-5.jpg"
-								alt="Photo: Book"
-								class="unreleased-slider__image"
-							/>
-						</div>
+						<!-- If we need navigation buttons -->
 					</div>
-					<!-- If we need navigation buttons -->
+					<!-- /.swiper-container -->
 					<div
 						class="unreleased-slider__button unreleased-slider__button--prev"
-					></div>
+					>
+						<img
+							src="img/button-prev.png"
+							alt="Icon: Button Prev"
+							class="unreleased-slider__button-image"
+						/>
+					</div>
 					<div
 						class="unreleased-slider__button unreleased-slider__button--next"
-					></div>
+					>
+						<img
+							src="img/button-next.png"
+							alt="Icon: Button Next"
+							class="unreleased-slider__button-image"
+						/>
+					</div>
 				</div>
-				<!-- /.swiper-container -->
+				<!-- /.unreleased-wrapper -->
 			</div>
 			<!-- /.container -->
 		</div>
@@ -606,7 +630,10 @@
 		<section class="blog">
 			<div class="container">
 				<div class="blog__title-wrapper">
-					<h2 class="blog__title">Ehya Блог</h2>
+					<h2 class="blog__title">
+						Ehya <span class="blog__title blog__title--desktop">Блог</span>
+						<span class="blog__title blog__title--mobile">Blog</span>
+					</h2>
 					<a href="#" class="blog__title-link">Все Блоги</a>
 				</div>
 				<!-- /.blog__title-wrapper -->
@@ -648,7 +675,7 @@
 								class="blog__item-secondary"
 							/>
 							<div class="blog__about">
-								<span class="date">28 МАРТА 2020</span>
+								<span class="blog__date">28 МАРТА 2020</span>
 								<h3 class="blog__name-secondary">
 									Learn To Love Growth and You Will Be A Success
 								</h3>
@@ -664,7 +691,7 @@
 								class="blog__item-secondary"
 							/>
 							<div class="blog__about">
-								<span class="date">23 МАРТА 2020</span>
+								<span class="blog__date">23 МАРТА 2020</span>
 								<h3 class="blog__name-secondary">
 									Motivation How To Build Trust at your Work
 								</h3>
@@ -683,7 +710,10 @@
 		<div class="shares">
 			<div class="container">
 				<div class="shares-wrapper">
-					<h2 class="shares__title">Будь первым, кто узнает о наших акциях</h2>
+					<h2 class="shares__title">
+						Будь первым, кто узнает
+						<span class="shares__title-text">о наших акциях</span>
+					</h2>
 					<form action="#" class="shares__subscribe">
 						<input type="text" class="shares__input" placeholder="Ваш Emaill" />
 						<button class="shares__button">Регистрация</button>
@@ -728,7 +758,7 @@
 					</div>
 					<!-- /.footer__logo-info -->
 					<div class="footer__company-services">
-						<div class="footer__product">
+						<div class="footer__product footer__about">
 							<h3 class="footer__title">Продукт</h3>
 							<ul class="footer__ul">
 								<li class="footer__list">
@@ -749,7 +779,7 @@
 							</ul>
 						</div>
 						<!-- /.footer__product -->
-						<div class="footer__services">
+						<div class="footer__services footer__about">
 							<h3 class="footer__title">Сервисы</h3>
 							<ul class="footer__ul">
 								<li class="footer__list">
@@ -770,7 +800,7 @@
 							</ul>
 						</div>
 						<!-- /.footer__services -->
-						<div class="footer__company">
+						<div class="footer__company footer__about">
 							<h3 class="footer__title">Компания</h3>
 							<ul class="footer__ul">
 								<li class="footer__list">
@@ -788,7 +818,7 @@
 							</ul>
 						</div>
 						<!-- /.footer__company -->
-						<div class="footer__more">
+						<div class="footer__more footer__about">
 							<h3 class="footer__title">Еще..</h3>
 							<ul class="footer__ul">
 								<li class="footer__list">

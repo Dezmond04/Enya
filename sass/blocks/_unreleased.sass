@@ -1,8 +1,10 @@
-.unreleased
+.unreleased  
   min-height: 548px
   padding-top: 33px
   padding-bottom: 80px
   background-color: $secondary
+  &-wrapper
+    position: relative
   &__title
     margin-bottom: 59px
     padding-left: 5px
@@ -13,8 +15,7 @@
     line-height: 48px
     letter-spacing: 0.2px
     color: $light
-  &__slider  
-    position: relative  
+  &__slider 
     width: 100%
     height: 518px
     margin-top: -110px
@@ -31,7 +32,7 @@
       border-radius: 8px
     &__button
       position: absolute
-      top: 0      
+      top: -4px      
       z-index: 5
       width: 54px
       height: 56px
@@ -44,10 +45,68 @@
       background-position: center 
       &--next
         right: 0px
-        background-image: url(../img/button-next.png)
+        // background-image: url(../img/button-next.png)
       &--prev
-        right: 78px
-        background-image: url(../img/button-prev.png)
+        right: 75px
+        // background-image: url(../img/button-prev.png)
+@media (max-width: 992px)
+  .unreleased
+    min-height: auto
+    padding-bottom: 10px
+@media (max-width: 767px)
+  .unreleased
+    padding-bottom: 50px
+    &__title
+      margin-bottom: 35px
+      text-align: center
+    &__slider
+      margin-top: 0
+      padding-top: 40px
+      padding-bottom: 110px
+    &-slider
+      width: 65%
+      height: 100%
+      &__item
+        max-width: 100%
+      &__image
+        width: 100%
+      &__button
+        top: 91%
+        &--next
+          left: 50%
+          transform: translateX(70%)
+        &--prev 
+          left: 40%
+          transform: translateX(-70%)
+@media (max-width: 576px)
+  .unreleased
+    position: relative
+    padding-top: 25px 
+    padding-bottom: 137px
+    &__title
+      margin-bottom: 40px
+      font-style: normal
+      font-weight: bold
+      font-size: 28px
+      line-height: 36px
+    &-slider
+      width: 205px
+      height: 300px
+      padding: 0
+      &__button       
+        top: 111%
+        &-image
+          width: 48px
+        &--next
+          left: 41%
+          transform: translateX(70%)          
+        &--prev 
+          left: 43%
+          transform: translateX(-70%)
+      
+
+
+
         
 
     

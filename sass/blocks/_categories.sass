@@ -13,8 +13,7 @@
     height: 240px
     padding: 0 2px
   &-slider            
-    &__item        
-      z-index: 90        
+    &__item 
       max-width: 265px
       padding-top: 40px
       text-align: center
@@ -57,14 +56,62 @@
   .category
     &-wrapper
       max-width: 900px
-    &-slider
+    &-slider      
       &__item
         max-width: 325px
 @media (max-width: 992px)
   .category
+    padding-top: 50px
+    padding-bottom: 65px
+    &__slider
+      height: 535px
+    &-slider
+      &__item
+        height: calc((100% - 30px)/2)  
+        &:nth-child(1) 
     &-wrapper
       max-width: 650px
-  
+@media (max-width: 767px)
+  .category
+    padding-bottom: 107px
+    &-wrapper
+      max-width: 92%
+      padding-bottom: 31px
+    &__slider
+      height: 374px 
+    &-slider
+      &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        max-h: 182px        
+        padding-top: 20px
+        padding-left: 10px
+        text-align: center   
+      &__icon
+        width: 36px
+        margin-bottom: 16px
+      &__title
+        margin-bottom: 10px
+        font-style: normal
+        font-weight: bold
+        font-size: 14px
+        line-height: 20px
+        &--mb2
+          margin-bottom: 29px
+      &__text 
+        padding-right: 12px
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 20px
+      &__button
+        top: 100%
+        width: 48px
+        width: 48px
+        &--next
+          left: 50%
+          transform: translateX(-50%) 
         
     
      
