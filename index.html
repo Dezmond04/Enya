@@ -11,12 +11,13 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
 		<header class="navbar">
 			<div class="container">
-				<div class="navbar-menu">
+				<div class="navbar-menu navbar-menu__fixed">
 					<a href="#" class="logo navbar__logo">
 						<img src="img/logo.svg" alt="Logo: Enya" class="logo__image" />
 					</a>
@@ -37,11 +38,28 @@
 							<span class="menu-button__line"></span>
 							<span class="menu-button__line"></span>
 						</button>
-						<button class="button navbar-menu__button">Получить</button>
+						<button data-toggle="modal" class="button navbar-menu__button">Получить</button>
 					</div>
 					<!-- /.navbar-menu__wrapper -->
 				</div>
 				<!-- /.navbar-menu -->
+				<div class="navbar-menu__mobile navbar-menu__mobile--visible">
+					<ul class="navbar-menu__mobile-active">
+						<li class="navbar-menu__item-mobile">
+							<a href="#" class="navbar-menu__link-mobile">Рекомендации</a>
+						</li>
+						<li class="navbar-menu__item-mobile">
+							<a href="#" class="navbar-menu__link-mobile">Книги</a>
+						</li>
+						<li class="navbar-menu__item-mobile">
+							<a href="#" class="navbar-menu__link-mobile">Блог</a>
+						</li>
+						<li class="navbar-menu__item-mobile">
+							<button data-toggle="modal" class="button navbar-menu__button-mobile">Получить</button>
+						</li>
+						<button data-toggle="modal" class="button navbar-menu__button">Получить</button>
+					</ul>
+				</div>
 			</div>
 			<!-- /.navbar -->
 		</header>
@@ -346,7 +364,6 @@
 							</h3>
 							<span class="category-slider__text">Книги о мотивации</span>
 						</div>
-
 						<div class="swiper-slide category-slider__item">
 							<img
 								src="img/category-slider-image-3.svg"
@@ -471,15 +488,18 @@
 				<div class="story__video">
 					<div class="story__item story__item-main">
 						<img
-							src="img/video-img-1.jpg"
-							alt="Video: Main"
-							class="story__image"
+						src="img/video-img-1.jpg"
+						alt="Video: Main"
+						class="story__image"
 						/>
-						<img
+						<a data-fancybox href="https://www.youtube.com/watch?v=ddbxsrGPRY0&t=1519s">
+							<img
 							src="img/play-icon.svg"
 							alt="Icon: Play"
 							class="story__play story__play-main"
 						/>
+					</a>
+					
 					</div>
 					<div class="story__item story__item-secondary">
 						<img
@@ -487,7 +507,10 @@
 							alt="Video: Video secondary"
 							class="story__image-secondary"
 						/>
-						<img src="img/play.svg" alt="Icon: Play" class="story__play" />
+						<a data-fancybox href="https://www.youtube.com/watch?v=yWVJgnTpdUA&t=692s">
+							<img src="img/play.svg" alt="Icon: Play" class="story__play" />
+					</a>
+					
 						<div class="story__name-wrapper">
 							<span class="story__name">Emelda Scandroot</span>
 							<button class="story__favorites">
@@ -506,11 +529,10 @@
 							alt="Video: Video Secondary"
 							class="story__image-secondary"
 						/>
-						<img
-							src="img/play.svg"
-							alt="Icon: Play"
-							class="story__play story__play-light"
-						/>
+						<a data-fancybox href="https://www.youtube.com/watch?v=kupwmF72Plo">
+							<img src="img/play.svg" alt="Icon: Play" class="story__play" />
+					</a>
+					
 						<div class="story__name-wrapper">
 							<span class="story__name">Mar Rueda</span>
 							<button class="story__favorites">
@@ -529,11 +551,9 @@
 							alt="Video: Video Secondary"
 							class="story__image-secondary"
 						/>
-						<img
-							src="img/play.svg"
-							alt="Icon: Play"
-							class="story__play story__play-light"
-						/>
+						<a data-fancybox href="https://www.youtube.com/watch?v=eX8R4tduyPA&t=567s">
+							<img src="img/play.svg" alt="Icon: Play" class="story__play" />
+					</a>
 						<div class="story__name-wrapper">
 							<span class="story__name">Nembo Lukeni</span>
 							<button class="story__favorites">
@@ -850,7 +870,49 @@
 			</div>
 			<!-- /.container -->
 		</footer>
-		<script src="js/swiper-bundle.min.js"></script>
+		<div class="modal">
+			<div class="modal__overlay"></div>
+			<!-- /.modal__overlay -->
+			<div class="modal__dialog">
+				<a href="#" class="modal__close">
+					<img src="img/close.svg" alt="icon: close" />
+				</a>
+				<h3 class="modal__title">Получить</h3>
+				<form action="send.php" method="POST" class="modal__form form">
+					<input
+						type="text"
+						class="input modal__input"
+						placeholder="Введите ваше имя*"
+						name="name"
+						required
+						minlength="2"
+					/>
+					<input
+						type="tel"
+						class="input modal__input input_phone"
+						placeholder="Номер телефона*"
+						name="phone"
+						required
+						minlength="18"
+					/>
+					<input
+						type="email"
+						class="input modal__input"
+						placeholder="Email*"
+						name="user_email"
+						required
+					/>
+					
+					<div class="modal__button-wrapper">
+						<button class="button modal__button" type="submit">Отправить</button>
+						<span class="modal__info">* Обязательное поле</span>
+					</div>
+				</form>
+			</div>
+			<!-- /.modal__dialog -->
+			<script src="js/jquery-3.6.0.min.js"></script>
+			<script src="js/swiper-bundle.min.js"></script>
+			<script src="js/jquery.fancybox.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
