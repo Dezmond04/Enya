@@ -4,21 +4,34 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Enya - современный и креативный веб-дизайн</title>
+		<title>Ehya - современный и креативный веб-дизайн</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@500&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
-		<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+		<link rel="stylesheet" href="css/jquery.fancybox.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
 		<header class="navbar">
+			<div class="navbar-menu navbar-menu--fixed">
+				<div class="navbar-menu__fixed-wrapper">
+					<a href="index.html" class="logo navbar__logo">
+						<img src="img/logo.svg" alt="Logo: Enya" class="logo__image" />
+					</a>
+					<button class="menu-button navbar__menu-button">
+						<span class="menu-button__line"></span>
+						<span class="menu-button__line"></span>
+						<span class="menu-button__line"></span>
+					</button>
+				</div>
+			</div>
 			<div class="container">
-				<div class="navbar-menu navbar-menu__fixed">
-					<a href="#" class="logo navbar__logo">
+				<div class="navbar-menu">
+					<a href="index.html" class="logo navbar__logo">
 						<img src="img/logo.svg" alt="Logo: Enya" class="logo__image" />
 					</a>
 					<div class="navbar-menu__wrapper">
@@ -38,12 +51,17 @@
 							<span class="menu-button__line"></span>
 							<span class="menu-button__line"></span>
 						</button>
-						<button data-toggle="modal" class="button navbar-menu__button">Получить</button>
+						<button
+							data-toggle="modal"
+							class="button navbar-menu__button navbar-menu__button--hover"
+						>
+							Получить
+						</button>
 					</div>
 					<!-- /.navbar-menu__wrapper -->
 				</div>
 				<!-- /.navbar-menu -->
-				<div class="navbar-menu__mobile">
+				<div class="navbar-menu navbar-menu--mobile">
 					<ul class="navbar-menu__mobile-active">
 						<li class="navbar-menu__item-mobile">
 							<a href="#" class="navbar-menu__link-mobile">Рекомендации</a>
@@ -55,9 +73,18 @@
 							<a href="#" class="navbar-menu__link-mobile">Блог</a>
 						</li>
 						<li class="navbar-menu__item-mobile">
-							<button data-toggle="modal" class="button navbar-menu__button-mobile">Получить</button>
+							<button
+								data-toggle="modal"
+								class="button navbar-menu__button-mobile"
+							>
+								Получить
+							</button>
 						</li>
-						<button data-toggle="modal" class="button navbar-menu__button">Получить</button>
+						<li class="navbar-menu__item-mobile">
+							<button data-toggle="modal" class="button navbar-menu__button">
+								Получить
+							</button>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -80,12 +107,22 @@
 							стратегиями ценообразования на творческую работу.
 						</p>
 						<div class="about__buttons-wrapper">
-							<button class="button about__button about__button-buy">
+							<button
+								class="
+									button
+									about__button about__button-buy about__button-buy--hover
+								"
+							>
 								Купить сейчас
 							</button>
-							<button class="button about__button about__button-read">
-								Читать демо
-							</button>
+							<a
+								href="#"
+								class="
+									button
+									about__button about__button-read about__button-read--hover
+								"
+								>Читать демо</a
+							>
 						</div>
 						<!-- /.about__buttons-wraper -->
 					</div>
@@ -123,9 +160,20 @@
 									</h3>
 									<span class="recommendation-card__name">Art & Design</span>
 									<span class="recommendation-card__price">$25.00</span
-									><button class="recommendation-card__button">Купить</button>
+									><button
+										class="
+											recommendation-card__button
+											recommendation-card__button--hover
+										"
+									>
+										Купить
+									</button>
 									<button class="recommendation-card__button-like">
-										<img src="img/heart.svg" alt="Icon: Like" />
+										<img
+											class="recommendation-card__like"
+											src="img/heart.svg"
+											alt="Icon: Like"
+										/>
 									</button>
 								</div>
 							</div>
@@ -147,9 +195,20 @@
 									</h3>
 									<span class="recommendation-card__name">Education</span
 									><span class="recommendation-card__price">$28.00</span
-									><button class="recommendation-card__button">Купить</button>
+									><button
+										class="
+											recommendation-card__button
+											recommendation-card__button--hover
+										"
+									>
+										Купить
+									</button>
 									<button class="recommendation-card__button-like">
-										<img src="img/heart.svg" alt="Icon: Like" />
+										<img
+											class="recommendation-card__like"
+											src="img/heart.svg"
+											alt="Icon: Like"
+										/>
 									</button>
 								</div>
 							</div>
@@ -168,9 +227,20 @@
 									</h3>
 									<span class="recommendation-card__name">Novel</span
 									><span class="recommendation-card__price">$19.50</span
-									><button class="recommendation-card__button">Купить</button>
+									><button
+										class="
+											recommendation-card__button
+											recommendation-card__button--hover
+										"
+									>
+										Купить
+									</button>
 									<button class="recommendation-card__button-like">
-										<img src="img/heart.svg" alt="Icon: Like" />
+										<img
+											class="recommendation-card__like"
+											src="img/heart.svg"
+											alt="Icon: Like"
+										/>
 									</button>
 								</div>
 							</div>
@@ -192,12 +262,19 @@
 									</h3>
 									<span class="recommendation-card__name">Novel</span
 									><span class="recommendation-card__price">$20.00</span
-									><button class="recommendation-card__button">Купить</button>
+									><button
+										class="
+											recommendation-card__button
+											recommendation-card__button--hover
+										"
+									>
+										Купить
+									</button>
 									<button class="recommendation-card__button-like">
 										<img
 											src="img/heart.svg"
 											alt="Icon: Like"
-											class="recommendation-card__button-icon"
+											class="recommendation-card__like"
 										/>
 									</button>
 								</div>
@@ -220,9 +297,20 @@
 									</h3>
 									<span class="recommendation-card__name">Business</span
 									><span class="recommendation-card__price">$23.00</span
-									><button class="recommendation-card__button">Купить</button>
+									><button
+										class="
+											recommendation-card__button
+											recommendation-card__button--hover
+										"
+									>
+										Купить
+									</button>
 									<button class="recommendation-card__button-like">
-										<img src="img/heart.svg" alt="Icon: Like" />
+										<img
+											class="recommendation-card__like"
+											src="img/heart.svg"
+											alt="Icon: Like"
+										/>
 									</button>
 								</div>
 							</div>
@@ -242,16 +330,31 @@
 									</h3>
 									<span class="recommendation-card__name">Motivation</span
 									><span class="recommendation-card__price">$23.00</span
-									><button class="recommendation-card__button">Купить</button>
+									><button
+										class="
+											recommendation-card__button
+											recommendation-card__button--hover
+										"
+									>
+										Купить
+									</button>
 									<button class="recommendation-card__button-like">
-										<img src="img/heart.svg" alt="Icon: Like" />
+										<img
+											class="recommendation-card__like"
+											src="img/heart.svg"
+											alt="Icon: Like"
+										/>
 									</button>
 								</div>
 							</div>
 							<!-- /.card -->
 						</div>
 						<!-- /.card-wrapper -->
-						<button class="recommendation__button">Больше рекомендаций</button>
+						<button
+							class="recommendation__button recommendation__button--hover"
+						>
+							Больше рекомендаций
+						</button>
 					</div>
 					<!-- /.recommendation -->
 					<div class="best">
@@ -270,7 +373,9 @@
 										Sprint : Solve, Test in 5 Days
 									</h3>
 									<span class="best-card__price">$23.00</span
-									><button class="best-card__button">Купить</button>
+									><button class="best-card__button best-card__button--hover">
+										Купить
+									</button>
 								</div>
 								<!-- /.best-card__info -->
 							</div>
@@ -286,7 +391,9 @@
 								<div class="best-card__info">
 									<h3 class="best-card__title">Hacking Growth Break Problem</h3>
 									<span class="best-card__price">$23.00</span
-									><button class="best-card__button">Купить</button>
+									><button class="best-card__button best-card__button--hover">
+										Купить
+									</button>
 								</div>
 								<!-- /.best-card__info -->
 							</div>
@@ -302,7 +409,9 @@
 								<div class="best-card__info">
 									<h3 class="best-card__title">Very Nice a Novel by Mercy</h3>
 									<span class="best-card__price">$23.00</span
-									><button class="best-card__button">Купить</button>
+									><button class="best-card__button best-card__button--hover">
+										Купить
+									</button>
 								</div>
 								<!-- /.best-card__info -->
 							</div>
@@ -320,13 +429,17 @@
 										Hooked : How to Build Products
 									</h3>
 									<span class="best-card__price">$23.00</span
-									><button class="best-card__button">Купить</button>
+									><button class="best-card__button best-card__button--hover">
+										Купить
+									</button>
 								</div>
 								<!-- /.best-card__info -->
 							</div>
 							<!-- /.best-card -->
 							<div class="best__button-wrapper">
-								<button class="best__button">Лучшие книги</button>
+								<button class="best__button best__button--hover">
+									Лучшие книги
+								</button>
 							</div>
 						</div>
 						<!-- /.best-wrapper -->
@@ -391,7 +504,7 @@
 				</div>
 				<!-- /.swiper-container -->
 				<div
-					class="category-slider__button category-slider__button--next"
+					class="category__button-slider category__button-slider--next"
 				></div>
 			</div>
 			<!-- /.category-wrapper -->
@@ -453,21 +566,21 @@
 					</div>
 					<!-- /.swiper-container -->
 					<div
-						class="unreleased-slider__button unreleased-slider__button--prev"
+						class="unreleased__button-slider unreleased__button-slider--prev"
 					>
 						<img
 							src="img/button-prev.png"
 							alt="Icon: Button Prev"
-							class="unreleased-slider__button-image"
+							class="unreleased__button-image"
 						/>
 					</div>
 					<div
-						class="unreleased-slider__button unreleased-slider__button--next"
+						class="unreleased__button-slider unreleased__button-slider--next"
 					>
 						<img
 							src="img/button-next.png"
 							alt="Icon: Button Next"
-							class="unreleased-slider__button-image"
+							class="unreleased__button-image"
 						/>
 					</div>
 				</div>
@@ -488,18 +601,20 @@
 				<div class="story__video">
 					<div class="story__item story__item-main">
 						<img
-						src="img/video-img-1.jpg"
-						alt="Video: Main"
-						class="story__image"
+							src="img/video-img-1.jpg"
+							alt="Video: Main"
+							class="story__image"
 						/>
-						<a data-fancybox href="https://www.youtube.com/watch?v=ddbxsrGPRY0&t=1519s">
+						<a
+							data-fancybox
+							href="https://www.youtube.com/watch?v=ddbxsrGPRY0&t=1519s"
+						>
 							<img
-							src="img/play-icon.svg"
-							alt="Icon: Play"
-							class="story__play story__play-main"
-						/>
-					</a>
-					
+								src="img/play-icon.svg"
+								alt="Icon: Play"
+								class="story__play story__play-main"
+							/>
+						</a>
 					</div>
 					<div class="story__item story__item-secondary">
 						<img
@@ -507,10 +622,13 @@
 							alt="Video: Video secondary"
 							class="story__image-secondary"
 						/>
-						<a data-fancybox href="https://www.youtube.com/watch?v=yWVJgnTpdUA&t=692s">
+						<a
+							data-fancybox
+							href="https://www.youtube.com/watch?v=yWVJgnTpdUA&t=692s"
+						>
 							<img src="img/play.svg" alt="Icon: Play" class="story__play" />
-					</a>
-					
+						</a>
+
 						<div class="story__name-wrapper">
 							<span class="story__name">Emelda Scandroot</span>
 							<button class="story__favorites">
@@ -531,8 +649,8 @@
 						/>
 						<a data-fancybox href="https://www.youtube.com/watch?v=kupwmF72Plo">
 							<img src="img/play.svg" alt="Icon: Play" class="story__play" />
-					</a>
-					
+						</a>
+
 						<div class="story__name-wrapper">
 							<span class="story__name">Mar Rueda</span>
 							<button class="story__favorites">
@@ -551,9 +669,12 @@
 							alt="Video: Video Secondary"
 							class="story__image-secondary"
 						/>
-						<a data-fancybox href="https://www.youtube.com/watch?v=eX8R4tduyPA&t=567s">
+						<a
+							data-fancybox
+							href="https://www.youtube.com/watch?v=eX8R4tduyPA&t=567s"
+						>
 							<img src="img/play.svg" alt="Icon: Play" class="story__play" />
-					</a>
+						</a>
 						<div class="story__name-wrapper">
 							<span class="story__name">Nembo Lukeni</span>
 							<button class="story__favorites">
@@ -654,7 +775,9 @@
 						Ehya <span class="blog__title blog__title--desktop">Блог</span>
 						<span class="blog__title blog__title--mobile">Blog</span>
 					</h2>
-					<a href="#" class="blog__title-link">Все Блоги</a>
+					<a href="#" class="blog__title-link blog__title-link--hover"
+						>Все Блоги</a
+					>
 				</div>
 				<!-- /.blog__title-wrapper -->
 				<div class="blog__content-wrapper">
@@ -734,8 +857,14 @@
 						Будь первым, кто узнает
 						<span class="shares__title-text">о наших акциях</span>
 					</h2>
-					<form action="#" class="shares__subscribe">
-						<input type="text" class="shares__input" placeholder="Ваш Emaill" />
+					<form action="send.php" method="POST" class="form shares__subscribe">
+						<input
+							type="email"
+							class="shares__input"
+							placeholder="Ваш Emaill"
+							name="user_email"
+							required
+						/>
 						<button class="shares__button">Регистрация</button>
 						<img src="img/email.svg" alt="Icon: Email" class="shares__icon" />
 					</form>
@@ -749,31 +878,53 @@
 			<div class="container">
 				<div class="footer-wrapper">
 					<div class="footer__logo-info">
-						<img src="img/logo.svg" alt="Icon: Logo" class="footer__logo" />
+						<a href="index.html" class="footer__logo-link">
+							<img src="img/logo.svg" alt="Icon: Logo" class="footer__logo" />
+						</a>
 						<span class="footer__text"
 							>Создайте современный и креативный веб-сайт с crealand</span
 						>
 						<div class="footer__social-wrapper">
-							<img
-								src="img/icon-google.svg"
-								alt="Icon: Google"
-								class="footer__social"
-							/>
-							<img
-								src="img/icon-twiter.svg"
-								alt="Icon: Twiter"
-								class="footer__social"
-							/>
-							<img
-								src="img/icon-instagram.svg"
-								alt="Icon: Instagram"
-								class="footer__social"
-							/>
-							<img
-								src="img/icon-likedin.svg"
-								alt="Icon: LikedIn"
-								class="footer__social"
-							/>
+							<a
+								href="https://www.google.com.ua/"
+								target="_blank"
+								class="social-link"
+							>
+								<img
+									src="img/icon-google.svg"
+									alt="Icon: Google"
+									class="footer__social"
+								/>
+							</a>
+							<a href="https://twitter.com" target="_blank" class="social-link">
+								<img
+									src="img/icon-twiter.svg"
+									alt="Icon: Twiter"
+									class="footer__social"
+								/>
+							</a>
+							<a
+								href="https://instagram.com"
+								target="_blank"
+								class="social-link"
+							>
+								<img
+									src="img/icon-instagram.svg"
+									alt="Icon: Instagram"
+									class="footer__social"
+								/>
+							</a>
+							<a
+								href="https://www.linkedin.com"
+								target="_blank"
+								class="social-link"
+							>
+								<img
+									src="img/icon-likedin.svg"
+									alt="Icon: LikedIn"
+									class="footer__social"
+								/>
+							</a>
 						</div>
 					</div>
 					<!-- /.footer__logo-info -->
@@ -902,17 +1053,25 @@
 						name="user_email"
 						required
 					/>
-					
+
 					<div class="modal__button-wrapper">
-						<button class="button modal__button" type="submit">Отправить</button>
+						<button
+							class="button modal__button modal__button--hover"
+							type="submit"
+						>
+							Отправить
+						</button>
 						<span class="modal__info">* Обязательное поле</span>
 					</div>
 				</form>
 			</div>
 			<!-- /.modal__dialog -->
-			<script src="js/jquery-3.6.0.min.js"></script>
-			<script src="js/swiper-bundle.min.js"></script>
-			<script src="js/jquery.fancybox.min.js"></script>
+		</div>
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/jquery.mask.min.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/jquery.fancybox.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

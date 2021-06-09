@@ -30,7 +30,8 @@
       overflow: hidden
       object-fit: cover
       border-radius: 8px
-    &__button
+  &__button
+    &-slider
       position: absolute
       top: -4px      
       z-index: 5
@@ -70,7 +71,8 @@
         max-width: 100%
       &__image
         width: 100%
-      &__button
+    &__button
+      &-slider
         top: 91%
         &--next
           left: 50%
@@ -93,10 +95,11 @@
       width: 205px
       height: 300px
       padding: 0
-      &__button       
-        top: 111%
-        &-image
-          width: 48px
+    &__button 
+      &-image
+        width: 48px 
+      &-slider     
+        top: 111%        
         &--next
           left: 41%
           transform: translateX(70%)          

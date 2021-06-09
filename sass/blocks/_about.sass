@@ -40,14 +40,15 @@
     font-weight: bold
     font-size: 16px
     line-height: 22px
-    text-transform: uppercase
+    text-transform: uppercase    
     &-buy
       padding: 18px 37px
-      background: $primary
+      background-color: $primary
       color: $light
       border: none
       margin-right: 23px
     &-read
+      display: inline-block
       padding: 15px 49px
       background-color: $light
       color: $primary
@@ -56,6 +57,7 @@
       font-weight: bold
       font-size: 18px
       line-height: 25px
+      text-decoration: none
   &__image
     &-wrapper 
       position: relative
@@ -86,6 +88,17 @@
       &-wrapper
         max-width: 581px
         margin: auto
+    &__button
+      &-buy
+        &--hover
+          &:hover
+            background: $primary
+            color: $light
+      &-read
+        &--hover
+          &:hover
+            background: $light
+            color: $primary
 @media (max-width: 767px)
   .about
     &__buttons
@@ -130,7 +143,11 @@
     &__image
       &-wrapper
         padding: 59px 66px 59px 69px
-
+@media (max-width: 380px)
+  .about
+    &__image
+      width: 144px
+      height: 215px
 
   
         

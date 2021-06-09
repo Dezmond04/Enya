@@ -42,14 +42,16 @@
     padding: 0
   &__list
     list-style: none
-    margin-bottom: 24px
+    margin-bottom: 24px    
   &__link 
     font-style: normal
     font-weight: normal
     font-size: 16px
     line-height: 22px
     text-decoration: none
-    color: $secondary
+    color: $secondary   
+    &:hover
+      color: #FAAD13 
   &__like
     display: flex
     flex-direction: column
@@ -86,6 +88,9 @@
       margin-bottom: 23px
     &__list
       margin-bottom: 15px
+    &__link
+      &:hover
+        color: $secondary
     &__social
       &-wrapper
         width: 100%

@@ -191,6 +191,7 @@
     color: $primary
     border-top: 1px solid #ECEEF2
     background-color: transparent 
+    border-radius: 8px
     &-wrapper
       display: flex
       justify-content: center
@@ -216,18 +217,34 @@
       max-width: 340px
       &:nth-child(4)
         display: flex
+      &__button
+        &--hover
+          &:hover
+            background: $secondary
       &__title
         &-text
           display: inline
     &__button
       margin-bottom: 70px
+      &--hover        
+        &:hover 
+          color: $primary         
+          
   .best
+    &-card
+      &__button
+        &--hover
+          &:hover
+            background: $secondary
     &-wrapper
       display: flex
       justify-content: space-between
       flex-wrap: wrap
     &__button
       width: 92%
+      &--hover
+        &:hover
+          color: $primary
       &-wrapper
         width: 100%
 @media (max-width: 767px)

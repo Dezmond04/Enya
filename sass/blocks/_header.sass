@@ -5,7 +5,9 @@
     align-items: center
     padding-left: 0    
     padding-top: 36px
-    &__mobile
+    &--fixed
+      display: none
+    &--mobile
       display: none      
     &__wrapper
       display: flex
@@ -30,6 +32,8 @@
       font-weight: 600
       font-size: 16px
       line-height: 22px
+      &:hover
+        color: #FAAD13
     &__button
       padding: 11px 30px
       border: 2px solid $primary
@@ -60,23 +64,41 @@
       background-color: #000
       display: none
 @media (max-width: 992px)
-  .navbar
+  .navbar  
+    &-menu
+      &__button
+        &--hover
+          &:hover            
+            background: #fff  
+            color: $primary
+      &__link
+        &:hover
+          color: $secondary
     &__logo
       max-width: 90px 
 @media (max-width: 767px)
-  .navbar 
+  .navbar     
     &-menu
+      display: none      
       &__wrapper
         min-width: 10%
         justify-content: flex-end
-      &__fixed
+      &--fixed
         position: fixed
         display: flex
-        justify-content: space-between
-        align-items: center
-        width: 92%           
+        width: 100%           
         padding-top: 20px
-        z-index: 5     
+        padding-bottom: 20px
+        background-color: $light
+        z-index: 5 
+      &__fixed
+        &-wrapper    
+          display: flex
+          justify-content: space-between
+          align-items: center
+          margin-right: auto
+          margin-left: auto
+          width: 92%
       &__list
         display: none
       &__item
@@ -106,7 +128,7 @@
           text-align: center
         &--visible
           display: block
-          position: absolute
+          position: fixed
           max-height: 100vh
           margin-top: 65px
           top: 0
@@ -115,7 +137,7 @@
           right: 0
           background-color: $secondary
           overflow-y: auto
-          z-index: 1
+          z-index: 10
   .menu
     &-button
       height: 18px

@@ -87,7 +87,13 @@
     font-weight: bold
     font-size: 12px
     line-height: 15px
-    color: #E0E0E0  
+    color: #E0E0E0 
+@media (max-width: 992px) 
+  .modal
+    &__button
+      &--hover
+        &:hover
+          background: $primary
 @media (max-width: 576px)
   .modal
     &__dialog

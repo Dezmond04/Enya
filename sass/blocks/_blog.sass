@@ -52,7 +52,9 @@
     &:last-child
       margin-bottom: 0
   &__read
-    display: block    
+    display: block  
+    &:hover
+      color: #FAAD13  
   &__item
     max-width: 556px
     border-radius: 8px
@@ -133,6 +135,10 @@
         right: 50%
         transform: translateX(50%)
         bottom: 7px
+        &--hover
+          &:hover
+            color: $primary
+            background: $light
     &__content
       max-width: 100%
       margin-bottom: 20px
@@ -147,6 +153,9 @@
         margin-right: 50px
     &__article
       justify-content: flex-start
+    &__read
+      &:hover
+        color: $primary
 @media (max-width: 576px)
     .blog
       padding-top: 56px
@@ -177,7 +186,7 @@
           display: inline
       &__item
         height: 220px
-        margin-bottom: 17px
+        margin-bottom: 19px
         &-secondary
           margin-right: 16px
           height: 90px

@@ -12,25 +12,67 @@ body.modal-open
   margin: auto
 img
   width: 100%
+  height: auto
+  object-fit: cover
 button
   outline: none
   border: none
   cursor: pointer
+.button__hover, 
+.navbar-menu__button--hover,
+.about__button-buy--hover,
+.about__button-read--hover,
+.recommendation-card__button--hover,
+.blog__title-link--hover,
+.best-card__button--hover,
+.modal__button--hover
+  &:hover    
+    background: linear-gradient(to right, transparent, transparent 50%, #00a49b, #026773, #092c4e)
+    background-position: 100%  0 
+    background-size: 400% 200%
+    color: $light
+    transition: all 1s
+.best__button--hover,
+.recommendation__button--hover
+  &:hover    
+    color: #FAAD13   
 .button 
   border-radius: 8px 
 .swiper-button-disabled
   opacity: 0.35 
+.thankyou
+  &__title
+    margin-bottom: 10px
+  &__text
+    margin-bottom: 40px
+  &__button
+    margin-bottom: 10px
+    padding: 10px 37px
+    background-color: #1565D8
+    color: #fff
+    border: none
+    margin-right: 23px
+    text-decoration: none
+    border-radius: 8px
+.invalid
+  color: red
 @media (max-width:1200px)
   .container  
     max-width: 960px
 
 @media (max-width:992px)
   .container  
-    max-width: 700px
-
+    max-width: 700px 
+  .button
+    &__hover
+      &:hover
+        background: $light
+        color: $primary
 @media (max-width:767px)
   .container  
     max-width: 92% 
+  .thankyou
+    padding-top: 70px
   
   
   

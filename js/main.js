@@ -39,7 +39,7 @@ $(document).ready(function () {
 
 		// Navigation arrows
 		navigation: {
-			nextEl: ".category-slider__button--next",
+			nextEl: ".category__button-slider--next",
 		},
 	});
 
@@ -66,8 +66,8 @@ $(document).ready(function () {
 		},
 		// Navigation arrows
 		navigation: {
-			nextEl: ".unreleased-slider__button--next",
-			prevEl: ".unreleased-slider__button--prev",
+			nextEl: ".unreleased__button-slider--next",
+			prevEl: ".unreleased__button-slider--prev",
 		},
 	});
 
@@ -84,11 +84,16 @@ $(document).ready(function () {
 	function openModal() {
 		modalOverlay.addClass("modal__overlay--visible");
 		modalDialog.addClass("modal__dialog--visible");
+		const body = document.body;
+		body.style.height = "100vh";
+		body.style.overflowY = "hidden";
 	}
 	function closeModal(event) {
 		event.preventDefault();
 		modalOverlay.removeClass("modal__overlay--visible");
 		modalDialog.removeClass("modal__dialog--visible");
+		const body = document.body;
+		body.style.overflowY = "visible";
 	}
 
 	$(document).on("keydown", function (e) {
@@ -97,10 +102,70 @@ $(document).ready(function () {
 			if (modalDialog.hasClass("modal__dialog--visible")) {
 				modalOverlay.removeClass("modal__overlay--visible");
 				modalDialog.removeClass("modal__dialog--visible");
+				const body = document.body;
+				body.style.overflowY = "visible";
 			}
 		}
 	});
 	$(".menu-button").on("click", function () {
-		$(".navbar-menu__mobile").toggleClass("navbar-menu__mobile--visible");
+		$(".navbar-menu--mobile").toggleClass("navbar-menu__mobile--visible");
+	});
+
+	$(".recommendation-card__like").click(function () {
+		if ($(this).hasClass("recommendation-card__like")) {
+			$(this)
+				.removeClass("recommendation-card__like")
+				.addClass("recommendation-card__like--active");
+			$(this).attr("src", "img/heart-active.svg");
+			return;
+		}
+
+		if ($(this).hasClass("recommendation-card__like--active")) {
+			$(this)
+				.removeClass("recommendation-card__like--active")
+				.addClass("recommendation-card__like");
+			$(this).attr("src", "img/heart.svg");
+			return;
+		}
+	});
+
+	$(".story__favorites-image").click(function () {
+		if ($(this).hasClass("story__favorites-image")) {
+			$(this)
+				.removeClass("story__favorites-image")
+				.addClass("story__favorites-image--active");
+			$(this).attr("src", "img/favorites-solid.svg");
+			return;
+		}
+
+		if ($(this).hasClass("story__favorites-image--active")) {
+			$(this)
+				.removeClass("story__favorites-image--active")
+				.addClass("story__favorites-image");
+			$(this).attr("src", "img/favorites.svg");
+			return;
+		}
+	});
+	$(".form").each(function () {
+		$(this).validate({
+			errorClass: "invalid",
+			messages: {
+				name: {
+					required: "Пожалуйста, введите ваше имя",
+					minlength: "Ваше имя должно содиражать больше 2 символов",
+				},
+				phone: {
+					required: "Нам нужен номер вашего телефона что бы связаться с вами",
+					minlength: "Ваш телефон должен состоять из 11 символов",
+				},
+				user_email: {
+					required: "Нам нужна ваша почта что бы связаться с вами",
+					email: "Ваша почта должна быть в формате name@domain.com",
+				},
+			},
+		});
+	});
+	$(document).ready(function () {
+		$(".input_phone").mask("+7 (000) 000-00-00");
 	});
 });
