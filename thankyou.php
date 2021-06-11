@@ -7,6 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Enya - современный и креативный веб-дизайн</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@500&display=swap"
@@ -22,7 +23,12 @@
 				<div class="navbar-menu__fixed-wrapper">
 					<a href="index.html" class="logo navbar__logo">
 						<img src="img/logo.svg" alt="Logo: Enya" class="logo__image" />
-					</a>					
+					</a>
+					<button class="menu-button navbar__menu-button">
+						<span class="menu-button__line"></span>
+						<span class="menu-button__line"></span>
+						<span class="menu-button__line"></span>
+					</button>					
 				</div>
 			</div>
 			<div class="container">
@@ -33,13 +39,13 @@
 					<div class="navbar-menu__wrapper">
 						<ul class="navbar-menu__list">
 							<li class="navbar-menu__item">
-								<a href="#" class="navbar-menu__link">Рекомендации</a>
+								<a href="index.html#recommendation" class="navbar-menu__link">Рекомендации</a>
 							</li>
 							<li class="navbar-menu__item">
-								<a href="#" class="navbar-menu__link">Книги</a>
+								<a href="index.html#unreleased" class="navbar-menu__link">Книги</a>
 							</li>
 							<li class="navbar-menu__item">
-								<a href="#" class="navbar-menu__link">Блог</a>
+								<a href="index.html#blog" class="navbar-menu__link">Блог</a>
 							</li>
 						</ul>
 						<button class="menu-button navbar__menu-button">
@@ -54,13 +60,13 @@
 				<div class="navbar-menu navbar-menu--mobile">
 					<ul class="navbar-menu__mobile-active">
 						<li class="navbar-menu__item-mobile">
-							<a href="#" class="navbar-menu__link-mobile">Рекомендации</a>
+							<a href="index.html#recommendation" class="navbar-menu__link-mobile">Рекомендации</a>
 						</li>
 						<li class="navbar-menu__item-mobile">
-							<a href="#" class="navbar-menu__link-mobile">Книги</a>
+							<a href="index.html#unreleased" class="navbar-menu__link-mobile">Книги</a>
 						</li>
 						<li class="navbar-menu__item-mobile">
-							<a href="#" class="navbar-menu__link-mobile">Блог</a>
+							<a href="index.html#blog" class="navbar-menu__link-mobile">Блог</a>
 						</li>						
 					</ul>
 				</div>
@@ -227,6 +233,8 @@
 		</footer>	
 		<script src="js/jquery-3.6.0.min.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/jquery.mask.min.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
 		<script src="js/jquery.fancybox.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>

@@ -3,6 +3,7 @@
 body
   font-family: 'Open Sans', sans-serif
   color: $secondary
+  // overflow-x: hidden  
 body.modal-open 
   height: 100vh
   overflow-y: hidden
@@ -56,6 +57,20 @@ button
     border-radius: 8px
 .invalid
   color: red
+.to-top
+  &__link
+    position: fixed
+    bottom: 5%
+    right: 10px
+    width: 50px
+    height: 50px
+    z-index: 50
+    &--position
+      right: 27px
+  &__image
+    transform: rotate(-90deg)
+    width: 30px
+    height: 30px
 @media (max-width:1200px)
   .container  
     max-width: 960px
@@ -68,6 +83,7 @@ button
       &:hover
         background: $light
         color: $primary
+
 @media (max-width:767px)
   .container  
     max-width: 92% 

@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<header class="navbar">
+		<header id="navbar" class="navbar">
 			<div class="navbar-menu navbar-menu--fixed">
 				<div class="navbar-menu__fixed-wrapper">
 					<a href="index.html" class="logo navbar__logo">
@@ -35,15 +35,17 @@
 						<img src="img/logo.svg" alt="Logo: Enya" class="logo__image" />
 					</a>
 					<div class="navbar-menu__wrapper">
-						<ul class="navbar-menu__list">
+						<ul id="menu" class="navbar-menu__list">
 							<li class="navbar-menu__item">
-								<a href="#" class="navbar-menu__link">Рекомендации</a>
+								<a href="#recommendation" class="navbar-menu__link"
+									>Рекомендации</a
+								>
 							</li>
 							<li class="navbar-menu__item">
-								<a href="#" class="navbar-menu__link">Книги</a>
+								<a href="#unreleased" class="navbar-menu__link">Книги</a>
 							</li>
 							<li class="navbar-menu__item">
-								<a href="#" class="navbar-menu__link">Блог</a>
+								<a href="#blog" class="navbar-menu__link">Блог</a>
 							</li>
 						</ul>
 						<button class="menu-button navbar__menu-button">
@@ -61,27 +63,24 @@
 					<!-- /.navbar-menu__wrapper -->
 				</div>
 				<!-- /.navbar-menu -->
-				<div class="navbar-menu navbar-menu--mobile">
+				<div id="menu" class="navbar-menu navbar-menu--mobile">
 					<ul class="navbar-menu__mobile-active">
 						<li class="navbar-menu__item-mobile">
-							<a href="#" class="navbar-menu__link-mobile">Рекомендации</a>
+							<a href="#recommendation" class="navbar-menu__link-mobile"
+								>Рекомендации</a
+							>
 						</li>
 						<li class="navbar-menu__item-mobile">
-							<a href="#" class="navbar-menu__link-mobile">Книги</a>
+							<a href="#unreleased" class="navbar-menu__link-mobile">Книги</a>
 						</li>
 						<li class="navbar-menu__item-mobile">
-							<a href="#" class="navbar-menu__link-mobile">Блог</a>
+							<a href="#blog" class="navbar-menu__link-mobile">Блог</a>
 						</li>
 						<li class="navbar-menu__item-mobile">
 							<button
 								data-toggle="modal"
 								class="button navbar-menu__button-mobile"
 							>
-								Получить
-							</button>
-						</li>
-						<li class="navbar-menu__item-mobile">
-							<button data-toggle="modal" class="button navbar-menu__button">
 								Получить
 							</button>
 						</li>
@@ -143,7 +142,7 @@
 		<section class="products">
 			<div class="container">
 				<div class="products-wrapper">
-					<div class="recommendation">
+					<div id="recommendation" class="recommendation">
 						<h2 class="recommendation__title">Рекомендации</h2>
 						<div class="card-wrapper">
 							<div class="recommendation-card">
@@ -453,7 +452,111 @@
 		<!-- /.section products -->
 		<div class="category">
 			<div class="category-wrapper">
-				<div class="swiper-container category-slider category__slider">
+				<div
+					class="
+						swiper-container
+						category-slider category__slider
+						category-slider--mobile
+					"
+				>
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide category-slider__item">
+							<img
+								src="img/category-slider-image-1.svg"
+								alt="Icon: Diagram"
+								class="category-slider__icon"
+							/>
+							<h3 class="category-slider__title">Бизнес & Финансы</h3>
+							<span class="category-slider__text">Книги про мир бизнеса</span>
+						</div>
+						<div class="swiper-slide category-slider__item">
+							<img
+								src="img/category-slider-image-2.svg"
+								alt="Icon: Diamand"
+								class="category-slider__icon"
+							/>
+							<h3 class="category-slider__title category-slider__title--mb2">
+								Самомотиватия
+							</h3>
+							<span class="category-slider__text">Книги о мотивации</span>
+						</div>
+						<div class="swiper-slide category-slider__item">
+							<img
+								src="img/category-slider-image-1.svg"
+								alt="Icon: Diagram"
+								class="category-slider__icon"
+							/>
+							<h3 class="category-slider__title">Бизнес & Финансы</h3>
+							<span class="category-slider__text">Книги про мир бизнеса</span>
+						</div>
+						<div class="swiper-slide category-slider__item">
+							<img
+								src="img/category-slider-image-2.svg"
+								alt="Icon: Diamand"
+								class="category-slider__icon"
+							/>
+							<h3 class="category-slider__title category-slider__title--mb2">
+								Самомотиватия
+							</h3>
+							<span class="category-slider__text">Книги о мотивации</span>
+						</div>
+						<div class="swiper-slide category-slider__item">
+							<img
+								src="img/category-slider-image-3.svg"
+								alt="Icon: Book"
+								class="category-slider__icon"
+							/>
+							<h3 class="category-slider__title">Романы Теленовеллы</h3>
+							<span class="category-slider__text"
+								>Книги с крутыми историями</span
+							>
+						</div>
+						<div class="swiper-slide category-slider__item">
+							<img
+								src="img/category-slider-image-4.svg"
+								alt="Icon: Skill"
+								class="category-slider__icon"
+							/>
+							<h3 class="category-slider__title">Навыки будущего</h3>
+							<span class="category-slider__text"
+								>Книги для самоподготовки
+							</span>
+						</div>
+						<div class="swiper-slide category-slider__item">
+							<img
+								src="img/category-slider-image-3.svg"
+								alt="Icon: Book"
+								class="category-slider__icon"
+							/>
+							<h3 class="category-slider__title">Романы Теленовеллы</h3>
+							<span class="category-slider__text"
+								>Книги с крутыми историями</span
+							>
+						</div>
+						<div class="swiper-slide category-slider__item">
+							<img
+								src="img/category-slider-image-4.svg"
+								alt="Icon: Skill"
+								class="category-slider__icon"
+							/>
+							<h3 class="category-slider__title">Навыки будущего</h3>
+							<span class="category-slider__text"
+								>Книги для самоподготовки
+							</span>
+						</div>
+					</div>
+					<!-- If we need navigation buttons -->
+				</div>
+				<!-- /.swiper-container -->
+				<div
+					class="
+						swiper-container
+						category-slider category__slider
+						category-slider--desktop
+					"
+				>
 					<!-- Additional required wrapper -->
 					<div class="swiper-wrapper">
 						<!-- Slides -->
@@ -506,11 +609,14 @@
 				<div
 					class="category__button-slider category__button-slider--next"
 				></div>
+				<div
+					class="category__button-slider category__button-slider--prev"
+				></div>
 			</div>
 			<!-- /.category-wrapper -->
 		</div>
 		<!-- /.category -->
-		<div class="unreleased">
+		<div id="unreleased" class="unreleased">
 			<div class="container">
 				<div class="unreleased-wrapper">
 					<h2 class="unreleased__title">Неизданные книги</h2>
@@ -594,8 +700,9 @@
 				<div class="story__top-wrapper">
 					<h2 class="story__title">История Автора</h2>
 					<p class="story__text">
-						Это раздел авторского рассказа. Каждую неделю мы стараемся
-						рассказать вам историю писателя. Расскажем всем о закулисье их книг.
+						<span class="story__text-start">Это раздел авторского</span>
+						рассказа. Каждую неделю мы стараемся рассказать вам историю
+						писателя. Расскажем всем о закулисье их книг.
 					</p>
 				</div>
 				<div class="story__video">
@@ -768,7 +875,7 @@
 			</div>
 		</div>
 		<!-- /.partners -->
-		<section class="blog">
+		<section id="blog" class="blog">
 			<div class="container">
 				<div class="blog__title-wrapper">
 					<h2 class="blog__title">
@@ -888,7 +995,7 @@
 							<a
 								href="https://www.google.com.ua/"
 								target="_blank"
-								class="social-link"
+								class="footer__social-link"
 							>
 								<img
 									src="img/icon-google.svg"
@@ -896,7 +1003,11 @@
 									class="footer__social"
 								/>
 							</a>
-							<a href="https://twitter.com" target="_blank" class="social-link">
+							<a
+								href="https://twitter.com"
+								target="_blank"
+								class="footer__social-link"
+							>
 								<img
 									src="img/icon-twiter.svg"
 									alt="Icon: Twiter"
@@ -906,7 +1017,7 @@
 							<a
 								href="https://instagram.com"
 								target="_blank"
-								class="social-link"
+								class="footer__social-link"
 							>
 								<img
 									src="img/icon-instagram.svg"
@@ -917,7 +1028,7 @@
 							<a
 								href="https://www.linkedin.com"
 								target="_blank"
-								class="social-link"
+								class="footer__social-link"
 							>
 								<img
 									src="img/icon-likedin.svg"
@@ -1066,6 +1177,11 @@
 				</form>
 			</div>
 			<!-- /.modal__dialog -->
+		</div>
+		<div id="menu" class="to-top">
+			<a href="#navbar" class="to-top__link">
+				<img src="img/arrow-up.svg" alt="Up" class="to-top__image" />
+			</a>
 		</div>
 		<script src="js/jquery-3.6.0.min.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>

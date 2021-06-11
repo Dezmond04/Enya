@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	const categorySlider = new Swiper(".category-slider", {
+	const categorySliderMobile = new Swiper(".category-slider--mobile", {
 		keyboard: {
 			enabled: true,
 			onlyInViewport: false,
@@ -25,9 +25,30 @@ $(document).ready(function () {
 				slidesPerColumnFill: "row",
 				loop: false,
 			},
+		},
+
+		// Navigation arrows
+		navigation: {
+			nextEl: ".category__button-slider--next",
+			prevEl: ".category__button-slider--prev",
+		},
+	});
+
+	const categorySliderDesktop = new Swiper(".category-slider--desktop", {
+		keyboard: {
+			enabled: true,
+			onlyInViewport: false,
+		},
+		// Optional parameters
+		// slidesPerView: 2,
+		// spaceBetween: 10,
+		// slidesPerColumn: 2,
+		// slidesPerColumnFill: "row",
+		// loop: false,
+		breakpoints: {
 			992: {
 				slidesPerView: 3,
-				slidesPerColumnFill: "column",
+				spaceBetween: 28,
 				loop: true,
 			},
 			1200: {
@@ -40,6 +61,7 @@ $(document).ready(function () {
 		// Navigation arrows
 		navigation: {
 			nextEl: ".category__button-slider--next",
+			prevEl: ".category__button-slider--prev",
 		},
 	});
 
@@ -80,20 +102,25 @@ $(document).ready(function () {
 
 	var modalOverlay = $(".modal__overlay");
 	var modalDialog = $(".modal__dialog");
+	var positionToTop = $(".to-top__link");
 
 	function openModal() {
 		modalOverlay.addClass("modal__overlay--visible");
 		modalDialog.addClass("modal__dialog--visible");
+		positionToTop.addClass("to-top__link--position");
 		const body = document.body;
 		body.style.height = "100vh";
 		body.style.overflowY = "hidden";
+		body.style.paddingRight = "17px";
 	}
 	function closeModal(event) {
 		event.preventDefault();
 		modalOverlay.removeClass("modal__overlay--visible");
 		modalDialog.removeClass("modal__dialog--visible");
+		positionToTop.removeClass("to-top__link--position");
 		const body = document.body;
 		body.style.overflowY = "visible";
+		body.style.paddingRight = "0";
 	}
 
 	$(document).on("keydown", function (e) {
@@ -102,12 +129,17 @@ $(document).ready(function () {
 			if (modalDialog.hasClass("modal__dialog--visible")) {
 				modalOverlay.removeClass("modal__overlay--visible");
 				modalDialog.removeClass("modal__dialog--visible");
+				positionToTop.removeClass("to-top__link--position");
 				const body = document.body;
 				body.style.overflowY = "visible";
+				body.style.paddingRight = "0";
 			}
 		}
 	});
 	$(".menu-button").on("click", function () {
+		$(".navbar-menu--mobile").toggleClass("navbar-menu__mobile--visible");
+	});
+	$(".navbar-menu__link-mobile").on("click", function () {
 		$(".navbar-menu--mobile").toggleClass("navbar-menu__mobile--visible");
 	});
 
@@ -167,5 +199,11 @@ $(document).ready(function () {
 	});
 	$(document).ready(function () {
 		$(".input_phone").mask("+7 (000) 000-00-00");
+	});
+	$("#menu, a").on("click", "a", function (event) {
+		event.preventDefault();
+		var id = $(this).attr("href"),
+			top = $(id).offset().top;
+		$("body,html").animate({ scrollTop: top }, 500);
 	});
 });
